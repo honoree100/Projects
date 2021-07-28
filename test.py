@@ -23,4 +23,10 @@ def testing(a, b):
 	if a>b:
 		print("the main villain is no more")
 
-		
+alloy=[mag, dia, sil, gold]
+letter=[]
+for eah in alloy:
+	letter.append(len(each))
+	
+
+
