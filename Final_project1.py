@@ -1,4 +1,7 @@
-wine_selection={"Verejo":[["mexican", "american", "world" ],["savory"] ,["tacos", "steak", "chicken"]], "Agiorgitiko":[["indian", "chinese", "world"],["spicy", "savory"],["steak","rice","tomato_sauce"]], "tokaji":[["french", "italian", "world"],["savory"],["cheese", "salad"]]}
+wine_selection={"Verejo":[["mexican", "american", "world" ],["savory"] ,["tacos", "steak", "chicken"]],\
+     "Agiorgitiko":[["indian", "chinese", "world"],["spicy", "savory"],["steak","rice","tomato_sauce"]], \
+         "tokaji":[["french", "italian", "world"],["savory"],["cheese", "salad"]]\
+             }
 
 def wine_to_drink(cusine,taste, meal):
     verejo_total_count=0
@@ -20,25 +23,35 @@ def wine_to_drink(cusine,taste, meal):
                 wine_selected.append(wine)
     
     print(wine_selected)
-    wine_to_drink=[]
     counter = 0
-    num =wine_selected[0]
+    wine_to_drink =wine_selected[0]
 
-    for i in wine_to_drink:
-        curr_frequency = wine_to_drink.count(i)
+    for i in wine_selected:
+        curr_frequency = wine_selected.count(i)
         if(curr_frequency> counter):
             counter = curr_frequency
-            num = i
+            wine_to_drink = i
  
-    print(num)
+    print("For you meal, I would strongly recommend to pair it with a nice glass of "+ wine_to_drink.upper())
 
 
-wine_to_drink("american","savory","steak")
+wine_to_drink("world","savory","salad")
 
 
-
-
-
+# def most_frequent(List):
+#     counter = 0
+#     num = List[0]
+     
+#     for i in List:
+#         curr_frequency = List.count(i)
+#         if(curr_frequency> counter):
+#             counter = curr_frequency
+#             num = i
+ 
+#     return num
+ 
+# List = [23, 5, 2, 2, 1, 3]
+# print(most_frequent(List))
 
 
 
